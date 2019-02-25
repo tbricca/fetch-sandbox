@@ -27,7 +27,7 @@
 
         document.getElementById('getUsers').addEventListener('click', getUsers);
         document.getElementById('getPosts').addEventListener('click', getPosts);
-        document.getElementById('getPosts').addEventListener('submit', addPost);
+        document.getElementById('addPost').addEventListener('submit', addPost);
         function getText(){
             // fetch('sample.txt')
             // //fetch returns a promise so we need a .then
@@ -80,6 +80,7 @@
                 document.getElementById('output').innerHTML = output;
             })
         }
+
         function addPost(e){
             e.preventDefault();
 
