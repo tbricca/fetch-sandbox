@@ -17,17 +17,17 @@
             <input type="text" id="title" placeholder="Title">
         </div>
         <div>
-            <textarea="body" placeholder="Body"></textarea>
+            <textarea id="body" placeholder="Body"></textarea>
         </div>
         <input type="submit" value="Submit">
     </form>
         
     <script>
-        document.getElementById('getText').addEventListener('click', getText)
+        document.getElementById('getText').addEventListener('click', getText);
 
-        document.getElementById('getUsers').addEventListener('click', getUsers)
-        document.getElementById('getPosts').addEventListener('click', getPosts)
-
+        document.getElementById('getUsers').addEventListener('click', getUsers);
+        document.getElementById('getPosts').addEventListener('click', getPosts);
+        document.getElementById('getPosts').addEventListener('submit', addPost);
         function getText(){
             // fetch('sample.txt')
             // //fetch returns a promise so we need a .then
@@ -79,6 +79,13 @@
                 });
                 document.getElementById('output').innerHTML = output;
             })
+        }
+        function addPost(e){
+            e.preventDefault();
+
+            let title = document.getElementById('title').value;
+            let body = document.getElementById('body').value;
+            
         }
     </script>
 </body>
